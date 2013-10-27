@@ -1,0 +1,15 @@
+<rule>
+屏蔽查询
+true
+
+</rule>
+<rule>
+表格可以编辑
+true
+
+</rule>
+<rule>
+设置下拉选择
+true
+coltype:number:number:varchar:varchar:date:date
+</rule>

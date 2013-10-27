@@ -1,0 +1,12 @@
+<form>
+SESSION_ID,number,SESSIONID,textfield,F,,F,F,T,T,F,0,F,T
+ORACLE_USERNAME,varchar,用户名,textfield,F,,F,F,T,T,F,0,F,T
+OS_USER_NAME,varchar,操作系统用户名,textfield,F,,F,F,T,T,T,0,F,T
+PROCESS,varchar,程序名,textfield,F,,F,F,T,T,T,0,F,T
+LOCKED_MODE,varchar,锁库模式,textfield,F,,F,F,T,T,T,0,F,T
+OBJECT_ID,number,对象ID,textfield,F,,F,F,T,T,T,0,F,T
+OBJECT_NAME,varchar,对象名,textfield,F,,F,F,T,T,T,0,F,T
+OBJECT_TYPE,varchar,对象类型,textfield,F,,F,F,T,T,T,0,F,T
+SERIALNO,varchar,序号,textfield,F,,F,F,T,T,T,0,F,T
+LOCKWAIT,varchar,死锁,textfield,F,,F,F,T,T,T,0,F,T
+</form>

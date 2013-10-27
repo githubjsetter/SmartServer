@@ -1,0 +1,10 @@
+<rule>
+分组
+false
+(分组小计)(prodarea)(goodsid,count)
+</rule>
+<rule>
+行表达式检查
+true
+goodsid>10:货品ID大于10
+</rule>

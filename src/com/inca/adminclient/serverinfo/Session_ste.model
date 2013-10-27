@@ -1,0 +1,12 @@
+<form>
+SID,number,SESSIONID,textfield,F,,F,F,T,T,F,0,F,T
+SERIALNO,number,序号,textfield,F,,F,F,T,T,F,0,F,T
+USERNAME,varchar,用户名,textfield,F,,F,F,T,T,T,0,F,T
+COMMAND,varchar,命令,textfield,F,,F,F,T,T,T,0,F,T
+SCHEMANAME,varchar,对象名,textfield,F,,F,F,T,T,T,0,F,T
+STATUS,varchar,状态,textfield,F,,F,F,T,T,T,0,F,T
+LOCKWAIT,varchar,锁库,textfield,F,,F,F,T,T,T,0,F,T
+MACHINE,varchar,机器名,textfield,F,,F,F,T,T,T,0,F,T
+PROGRAM,varchar,程序,textfield,F,,F,F,T,T,T,0,F,T
+MODULE,varchar,模块,textfield,F,,F,F,T,T,T,0,F,T
+</form>

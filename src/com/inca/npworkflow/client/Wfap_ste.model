@@ -1,0 +1,17 @@
+<form>
+apname,varchar,授权名,textfield,F,,F,T,T,T,T,0,F,F,F,,F
+apvalue,varchar,授权值,textarea,F,,F,F,T,T,T,0,F,F,F,,F
+rolename,varchar,角色,textfield,F,,F,T,T,T,F,0,F,F,F,,F
+wfid,number,流程ID,textfield,F,,F,T,T,T,F,0,F,F,F,,F
+roleid,number,角色ID,textfield,F,,F,T,T,T,T,0,F,F,F,,F
+wfroleid,number,序号,textfield,T,NP_WF_ROLE_AP_SEQ,F,T,T,T,T,0,F,F,F,,F
+</form>
+<table>
+行号,rolename,apvalue,apname,wfid,roleid,wfroleid
+</table>
+<querycolumns>
+
+</querycolumns>
+<initvalue>
+apname,wheres
+</initvalue>

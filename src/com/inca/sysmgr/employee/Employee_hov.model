@@ -1,0 +1,25 @@
+<hovtype>
+hovbase
+</hovtype>
+<querycond>
+opcode,varchar,操作码,textfield,F,,T,F,T,T,F,0,F,T,F,,F,-1,F
+employeename,varchar,姓名,textfield,F,,F,F,T,T,F,0,F,T,F,,F,-1,F
+employeeid,number,人员ID,textfield,F,,F,F,T,T,T,0,F,T,F,,F,-1,F
+deptid,number,部门ID,textfield,F,,F,F,T,T,F,0,F,T,F,,F,-1,F
+</querycond>
+<columns>
+employeename,varchar,姓名,textfield,F,,F,F,T,T,F,0,F,T,F,,F,137,F
+opcode,varchar,操作码,textfield,F,,F,F,T,T,F,0,F,T,F,,F,65,F
+deptname,varchar,部门,textfield,F,,F,F,T,T,F,0,F,T,F,,F,65,F
+employeeid,number,人员ID,textfield,F,,F,F,T,T,F,0,F,T,F,,F,65,F
+deptid,number,部门ID,textfield,F,,F,F,T,T,F,0,F,T,F,,F,65,F
+</columns>
+<defaultsql>
+Select employeeid,opcode,employeename,deptid,deptname from pub_employee_v where  nvl(usestatus,0)=1
+</defaultsql>
+<hovdesc>
+选择人员(多选)
+</hovdesc>
+<viewname>
+PUB_EMPLOYEE
+</viewname>

@@ -1,0 +1,16 @@
+<form>
+dataname,varchar,决策依据,textfield,F,,F,F,T,T,F,0,F,F,F,,F,277
+datavalue,varchar,数据,textfield,F,,F,F,T,T,T,0,F,F,F,,F,252
+wfnodeinstanceid,number,结点实例ID,textfield,T,,F,F,T,T,F,0,F,F,F,,F,75
+sortno,number,排序号,textfield,F,,F,F,T,T,T,0,F,F,F,,F,51
+wfnodedataid,number,结点数据ID,textfield,F,,F,F,T,T,T,0,F,F,F,,F,75
+</form>
+<table>
+行号,dataname,datavalue,sortno,wfnodeinstanceid,wfnodedataid
+</table>
+<querycolumns>
+
+</querycolumns>
+<querymustcolumns>
+
+</querymustcolumns>

@@ -1,0 +1,217 @@
+.flble {color:red;font-weight:bold}
+.flbln { 
+	font-family: Verdana,Arial,Helvetica,Sans-serif; 
+	font-size: 11px; 
+	color: #999999; 
+	line-height:17px;
+	}
+.flbln-2 { 
+	font-family: Verdana,Arial,Helvetica,Sans-serif; 
+	font-size: 11px; 
+	color: #999999;
+	}
+	
+.bg-dark {background-color: 808080}
+.bg-med {background-color: 999999}
+.bg-blue {background-color: 6699CC}
+.bg-ltblue {background-color: EFF5FA}
+.bg-white {background-color: FFFFFF}
+body  {font-family: "Tahoma"; 
+    font-size: 9pt; color: #000000; 
+    margin-top: 5px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;
+	SCROLLBAR-HIGHLIGHT-COLOR: #F1F1F1; 
+	SCROLLBAR-SHADOW-COLOR: #FFFFFF; 
+	SCROLLBAR-3DLIGHT-COLOR: #404040; 
+	SCROLLBAR-ARROW-COLOR: #111111; 
+	SCROLLBAR-TRACK-COLOR: #F1F1F1; 
+	SCROLLBAR-DARKSHADOW-COLOR: #000000
+	}
+
+.scrollbar {    SCROLLBAR-FACE-COLOR: #D0E5FF; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #F5F9FF; 
+	SCROLLBAR-SHADOW-COLOR: #828282; 
+	SCROLLBAR-3DLIGHT-COLOR: #404040; 
+	SCROLLBAR-ARROW-COLOR: #000000; 
+	SCROLLBAR-TRACK-COLOR: #FFFFFF; 
+	SCROLLBAR-DARKSHADOW-COLOR: #404040
+	}
+
+.text { 
+	font-family: Verdana,Arial,Helvetica,Sans-serif; 
+	font-size: 11px; 
+	color: #000000; 
+	line-height:17px;
+	}
+	
+.text-small { 
+	font-family: Verdana,Arial,Helvetica,Sans-serif; 
+	font-size: 10px; 
+	color: #000000; 
+	}
+	
+.text-cs { 
+	font-family: Verdana,Arial,Helvetica,Sans-serif; 
+	font-size: 10px; 
+	color: #000000; 
+	line-height:17px;
+	}
+	
+.quote { 
+	font-family: Verdana,Arial,Helvetica,Sans-serif; 
+	font-size: 11px; 
+	color: #013068; 
+	line-height:17px;
+	}
+	
+.quotee { 
+	font-family: Verdana,Arial,Helvetica,Sans-serif; 
+	font-size: 11px; 
+	color: #6996D9; 
+	line-height:17px;
+	}
+	
+.header { 
+	font-family: Verdana,Arial,Helvetica,Sans-serif; 
+	font-size: 14px; 
+	color: #FF0000; 
+	font-weight: bold; 
+	line-height:17px;
+	}
+	
+.header-cs { 
+	font-family: Verdana,Arial,Helvetica,Sans-serif; 
+	font-size: 10px; 
+	color: #666666; 
+	font-weight: bold; 
+	text-transform: uppercase; 
+	line-height:17px;
+	}
+.header-white { 
+	font-family: Verdana,Arial,Helvetica,Sans-serif; 
+	font-size: 12px; 
+	color: #ffffff; 
+	font-weight: bold; 
+	text-transform: uppercase; 
+	}
+	
+.text-sidebar { 
+	font-family: Verdana,Arial,Helvetica,Sans-serif; 
+	font-size: 10px; 
+	color: #666666; 
+	line-height:17px;
+	}
+	
+.text-table { 
+	font-family: Verdana,Arial,Helvetica,Sans-serif; 
+	font-size: 11px; 
+	color: #000000; 
+	line-height:17px;
+	}
+.header-sidebar { 
+	font-family: Verdana,Arial,Helvetica,Sans-serif; 
+	font-size: 12px; 
+	color: #666666; 
+	font-weight: bold; 
+	line-height:17px;
+	}
+.header-Home { 
+	font-family: Verdana,Arial,Helvetica,Sans-serif; 
+	font-size: 11px; 
+	color: #336699; 
+	font-weight: bold; 
+	}
+.header-table { 
+	font-family: Verdana,Arial,Helvetica,Sans-serif; 
+	font-size: 10px; 
+	color: #336699; 
+	font-weight: bold; 
+	background-color: EFF5FA
+	}
+	
+.date { 
+	font-family: Tahoma,Verdana,Arial,Helvetica,Sans-serif; 
+	font-size: 12px; 
+	color: #999999; 
+	font-weight: bold; 
+	}
+	
+.copyright  { 
+	font-family: Verdana,Arial,Helvetica,Sans-serif; 
+	font-size: 12px; 
+	color:#FF0000
+	}
+
+A:link {color:6699cc;text-decoration:none}
+A:visited {color:6699cc;;text-decoration:none}
+A:hover {color:ff8000;;text-decoration:none}
+
+A.read:link    {
+	color:6699cc; 
+	font-weight: bold; 
+	}
+	
+A.read:visited {
+	color:99ccff; 
+	font-weight: bold; 
+	}
+	
+A.read:hover {text-decoration: none;}
+
+A.smallish {
+	font : bold;
+	font-family : "MS Sans Serif", Geneva, sans-serif;
+	color : #6699cc;
+	text-decoration: none;
+	font-size: 10px;
+}
+
+A.smallish:hover {
+	font : bold;
+	font-family : "MS Sans Serif", Geneva, sans-serif;
+	color : #336699;
+	text-decoration: none;
+	font-size: 10px;
+	background : White;
+}
+
+A.faq:link    {
+	color:6699cc; 
+	font-weight: bold; 
+	}
+	
+A.faq:visited {
+	color:6699cc; 
+	font-weight: bold; 
+	}
+	
+A.faq:hover {text-decoration: none;}
+
+A.admin:link,A.admin:visited {color:6699cc;}
+
+.spotlight {
+	position:absolute; 
+	width: 180px; 
+	height: 100px; 
+	left: 585px; 
+	top: 360px; 
+	visibility: hidden;
+}
+
+.input  {
+	BACKGROUND-COLOR: #ffffff; 
+	COLOR: #000000; 
+	BORDER-STYLE: solid; 
+	BORDER-COLOR: #6699CC ;  
+}
+
+.button  {
+	BACKGROUND-COLOR: #ffffff; 
+	COLOR: #6699CC; 
+	BORDER-STYLE: solid; 
+	BORDER-COLOR: #6699CC ; 
+	font-weight:bold; 
+	font-family : verdana,helvetica,Arial,sans-serif; 
+	font-size : 10px;
+}
+
+.text2 { font-family: Verdana, Arial, Helvetica, Sans-serif; font-size: 11px; color: #0000CC; line-height:17px; }

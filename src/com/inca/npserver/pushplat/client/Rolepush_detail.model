@@ -1,0 +1,16 @@
+<form>
+pushname,varchar,推送名称,textfield,F,,F,T,T,F,T,0,F,F,F,,F,157
+otherwheres,varchar,附加条件,textarea,F,,F,F,T,T,T,0,F,F,F,,F,135
+roleid,number,角色ID,textfield,F,,F,T,T,T,F,0,F,F,F,,F,132
+pushid,number,推送ID,textfield,F,,F,T,T,T,F,0,F,F,F,,F,159
+rolepushid,number,序号,textfield,T,NP_ROLE_PUSH_SEQ,F,T,T,T,T,0,F,F,F,,F,-1
+</form>
+<table>
+行号,pushname,otherwheres,roleid,pushid
+</table>
+<querycolumns>
+
+</querycolumns>
+<querymustcolumns>
+
+</querymustcolumns>

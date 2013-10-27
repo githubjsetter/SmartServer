@@ -1,0 +1,10 @@
+<rule>
+设置编辑控件大小
+true
+url:360:27.0
+</rule>
+<rule>
+工具条加按钮
+true
+SYSTEM用户密码:设置ORACLE SYSTEM用户密码，用于数据库系统的监视:SYSTEMPASSWORD:无:0
+</rule>

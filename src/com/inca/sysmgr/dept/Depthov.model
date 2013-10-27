@@ -1,0 +1,24 @@
+<hovtype>
+hovbase
+</hovtype>
+<querycond>
+companyopcode,varchar,操作码,textfield,F,,T,F,T,T,F,0,F,T,F,,F,-1,F
+companyname,varchar,部门名称,textfield,F,,F,F,T,T,F,0,F,T,F,,F,-1,F
+companyid,number,部门ID,textfield,F,,F,F,T,T,T,0,F,T,F,,F,-1,F
+</querycond>
+<columns>
+companyname,varchar,部门名称,textfield,F,,F,F,T,T,F,0,F,T,F,,F,178,F
+companyopcode,varchar,单位操作码,textfield,F,,F,F,T,T,F,0,F,T,F,,F,120,F
+companyid,number,部门ID,textfield,F,,F,F,T,T,F,0,F,T,F,,F,96,F
+companypinyin,varchar,单位拼音,textfield,F,,F,F,T,T,F,0,F,T,F,,F,65,F
+companymemo,varchar,备注,textfield,F,,F,F,T,T,F,0,F,T,F,,F,65,F
+</columns>
+<defaultsql>
+select * from PUB_COMPANY
+</defaultsql>
+<hovdesc>
+选择部门
+</hovdesc>
+<viewname>
+PUB_COMPANY
+</viewname>

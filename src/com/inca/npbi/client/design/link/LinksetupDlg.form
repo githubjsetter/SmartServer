@@ -1,0 +1,15 @@
+<panelsize>533:434</panelsize>
+<comp>lbname:15:5:50:25:</comp>
+<comp>linkname:70:5:340:25:</comp>
+<comp>lbopid:825:175:60:15:</comp>
+<comp>textLinkopid:440:60:70:25:</comp>
+<comp>btnselectop:20:60:85:25:</comp>
+<comp>lbopname:830:80:75:15:</comp>
+<comp>textLinkopname:110:60:325:25:</comp>
+<comp>lbcond:785:275:50:15:</comp>
+<comp>jspcondtable:20:120:490:255:</comp>
+<comp>btnOk:105:395:60:25:</comp>
+<comp>btnCancel:320:395:60:25:</comp>
+<comp>btnDesign:445:395:70:25:</comp>
+<comp>titleborder1:10:40:505:50:调用的功能</comp>
+<comp>titleborder2:10:100:510:280:调用参数</comp>

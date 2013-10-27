@@ -1,0 +1,15 @@
+<rule>
+计算列
+true
+计算列1:companyid * 2
+</rule>
+<rule>
+细单计算列
+true
+计算列2:factoryid * 3
+</rule>
+<rule>
+工具条加按钮
+true
+test f7:test f7:COMMAND_F7:F7:0
+</rule>

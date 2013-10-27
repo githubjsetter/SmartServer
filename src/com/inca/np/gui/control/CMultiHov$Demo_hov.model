@@ -1,0 +1,27 @@
+<hovtype>
+hovbase
+</hovtype>
+<querycond>
+opcode,varchar,操作码,textfield,F,,T,F,T,T,F,0,F,T,F,,F,-1,F
+goodspinyin,varchar,拼音,textfield,F,,T,F,T,T,F,0,F,T,F,,F,-1,F
+goodsname,varchar,品名,textfield,F,,F,F,T,T,T,0,F,T,F,,F,-1,F
+goodsid,number,货品ID,textfield,F,,F,F,T,T,F,0,F,T,F,,F,-1,F
+</querycond>
+<columns>
+goodsid,number,货品ID,textfield,T,,F,T,T,T,F,0,F,T,F,,F,415,F
+opcode,varchar,操作码,textfield,F,,T,T,T,T,F,0,F,T,F,,F,75,F
+goodspinyin,varchar,拼音,textfield,F,,T,T,T,T,T,0,F,T,F,,F,75,F
+goodsname,varchar,品名,textfield,F,,F,F,T,T,F,0,F,T,F,,F,75,F
+goodstype,varchar,规格,textfield,F,,F,T,T,T,T,0,F,T,F,,F,75,F
+prodarea,varchar,产地,textfield,F,,F,T,T,T,F,0,F,T,F,,F,75,F
+goodsunit,varchar,单位,textfield,F,,F,F,T,T,T,0,F,T,F,,F,75,F
+</columns>
+<defaultsql>
+select goodsid,opcode,goodspinyin,goodsname,goodstype,prodarea,goodsunit from pub_goods order by opcode
+</defaultsql>
+<hovdesc>
+测试CMultiHov
+</hovdesc>
+<viewname>
+PUB_GOODS
+</viewname>

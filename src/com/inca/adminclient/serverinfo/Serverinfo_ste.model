@@ -1,0 +1,5 @@
+<form>
+name,varchar,信息项,textfield,F,,F,F,T,T,F,0,F,T
+value,varchar,值,textfield,F,,F,F,T,T,F,0,F,T
+memo,varchar,说明,textfield,F,,F,F,T,T,T,0,F,T
+</form>

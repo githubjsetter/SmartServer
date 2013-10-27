@@ -1,0 +1,10 @@
+<form>
+filename,varchar,文件名,textfield,F,,F,F,T,T,F,0,F,F,F
+filelength,number,文件大小,textfield,F,,F,F,T,T,T,0,F,F,F
+</form>
+<table>
+行号,filename,filelength
+</table>
+<querycolumns>
+
+</querycolumns>

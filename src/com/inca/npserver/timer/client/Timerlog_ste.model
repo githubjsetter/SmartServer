@@ -1,0 +1,15 @@
+<form>
+seqid,number,序号,textfield,T,NP_TIMER_LOG_SEQ,F,T,T,T,F,0,F,T,F,,F
+credate,date,执行日期,textfield,F,,F,T,T,T,F,0,F,T,F,,T
+classname,varchar,类名,textfield,F,,F,T,T,T,F,0,F,T,F,,F
+timername,varchar,定时器名,textfield,F,,F,T,T,T,F,0,F,T,F,,F
+timertype,varchar,类型,textfield,F,,F,T,T,T,F,0,F,F,F,,F
+timersec,number,执行时刻(秒),textfield,F,,F,T,T,T,F,0,F,F,F,,F
+execsec,number,用时(ms),textfield,F,,F,T,T,T,T,0,F,F,F,,F
+</form>
+<table>
+行号,timername,credate,classname,timertype,timersec,execsec,seqid
+</table>
+<querycolumns>
+credate:classname:timername:seqid
+</querycolumns>

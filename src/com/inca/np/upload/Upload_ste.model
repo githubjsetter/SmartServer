@@ -1,0 +1,10 @@
+<form>
+seqid,number,序号,textfield,F,,F,F,T,T,F,0,F,T
+credate,date,日期,textfield,F,,F,F,T,T,F,0,F,T
+employeeid,number,人员ID,textfield,F,,F,F,T,T,F,0,F,T
+employeename,varchar,人员,textfield,F,,F,F,T,T,F,0,F,T
+prodname,varchar,产品,textfield,F,,F,F,T,T,T,0,F,T
+remoteip,varchar,IP地址,textfield,F,,F,F,T,T,F,0,F,T
+filecount,number,更新文件数,textfield,F,,F,F,T,T,F,0,F,T
+memo,varchar,备注,textfield,F,,F,F,T,T,F,0,F,T
+</form>

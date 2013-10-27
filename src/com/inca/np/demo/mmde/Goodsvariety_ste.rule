@@ -1,0 +1,10 @@
+<rule>
+设置下拉选择
+true
+usestatus:0:作废:1:正常
+</rule>
+<rule>
+表格多选
+true
+
+</rule>

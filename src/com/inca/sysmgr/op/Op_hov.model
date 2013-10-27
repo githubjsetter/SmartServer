@@ -1,0 +1,26 @@
+<hovtype>
+hovbase
+</hovtype>
+<querycond>
+opcode,varchar,操作码,textfield,F,,T,F,T,T,F,0,F,T,F,,F,-1,F
+opname,varchar,功能名,textfield,F,,F,F,T,T,F,0,F,T,F,,F,-1,F
+opid,number,功能ID,textfield,F,,F,F,T,T,T,0,F,T,F,,F,-1,F
+prodname,varchar,产品名,textfield,F,,F,F,T,T,F,0,F,T,F,,F,-1,F
+modulename,varchar,模块名,textfield,F,,F,F,T,T,F,0,F,T,F,,F,-1,F
+</querycond>
+<columns>
+opname,varchar,功能名,textfield,F,,F,F,T,T,F,0,F,T,F,,F,181,F
+opcode,varchar,操作码,textfield,F,,F,F,T,T,F,0,F,T,F,,F,100,F
+prodname,varchar,产品,textfield,F,,F,F,T,T,F,0,F,T,F,,F,65,F
+modulename,varchar,模块名,textfield,F,,F,F,T,T,F,0,F,T,F,,F,65,F
+opid,number,功能ID,textfield,F,,F,F,T,T,F,0,F,T,F,,F,65,F
+</columns>
+<defaultsql>
+Select opid,opcode,opname,prodname,modulename from np_op
+</defaultsql>
+<hovdesc>
+选择功能(多选)
+</hovdesc>
+<viewname>
+NP_OP
+</viewname>

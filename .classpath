@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="conf"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/apachezip.jar"/>
+	<classpathentry kind="lib" path="lib/barcode.jar"/>
+	<classpathentry kind="lib" path="lib/comm.jar"/>
+	<classpathentry kind="lib" path="lib/jcommon-1.0.15.jar"/>
+	<classpathentry kind="lib" path="lib/jfreechart-1.0.0-rc1.jar"/>
+	<classpathentry kind="lib" path="lib/jfreechart-1.0.12.jar"/>
+	<classpathentry kind="lib" path="lib/jfreechart-experimental-1.0.4.jar"/>
+	<classpathentry kind="lib" path="lib/jnlp.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.8.jar"/>
+	<classpathentry kind="lib" path="lib/npbichart-2.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.6.jar"/>
+	<classpathentry kind="lib" path="lib/proguard.jar"/>
+	<classpathentry kind="lib" path="lib/servlet.jar"/>
+	<classpathentry kind="lib" path="lib/skinlf.jar"/>
+	<classpathentry kind="lib" path="lib/tomcat-dbcp.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

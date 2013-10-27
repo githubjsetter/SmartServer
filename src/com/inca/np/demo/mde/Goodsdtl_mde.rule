@@ -1,0 +1,25 @@
+<rule>
+设置编辑控件大小
+true
+memo:120:54
+</rule>
+<rule>
+级联查询
+true
+(test1,1)(companyid,=,goodsid)()
+</rule>
+<rule>
+细单级联查询
+true
+(test2,2)(employeeid,=,goodsid)()
+</rule>
+<rule>
+行表达式检查
+true
+opcode != "":必须输入操作码
+</rule>
+<rule>
+细单行表达式检查
+true
+packsize>200:包装大小大于200
+</rule>

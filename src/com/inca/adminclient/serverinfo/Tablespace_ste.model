@@ -1,0 +1,7 @@
+<form>
+tablespacename,varchar,表空间,textfield,F,,F,F,T,T,T,0,F,T
+usesize,varchar,使用空间,textfield,F,,F,F,T,T,T,0,F,T
+freesize,varchar,剩空空间,textfield,F,,F,F,T,T,T,0,F,T
+totalsize,varchar,空间,textfield,F,,F,F,T,T,T,0,F,T
+usepercent,varchar,使用%,textfield,F,,F,F,T,T,T,0,F,T
+</form>

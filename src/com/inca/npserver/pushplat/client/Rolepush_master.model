@@ -1,0 +1,13 @@
+<form>
+roleid,number,½ÇÉ«ID,textfield,T,,F,T,T,T,F,0,F,T,F,,F,96
+rolename,varchar,½ÇÉ«,textfield,F,,F,T,T,T,T,0,F,T,F,,F,268
+</form>
+<table>
+ÐÐºÅ,roleid,rolename
+</table>
+<querycolumns>
+roleid:rolename
+</querycolumns>
+<querymustcolumns>
+
+</querymustcolumns>

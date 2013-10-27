@@ -1,0 +1,10 @@
+<rule>
+设置系统下拉选择
+true
+usestatus:PUB_USESTATUS
+</rule>
+<rule>
+级联查询
+true
+(查询部门,1000003)(p_deptid,=,deptid:p_deptname,=,deptname)()
+</rule>

@@ -1,0 +1,15 @@
+<form>
+goodsid,number,货品流水号,textfield,F,,F,T,T,T,F,0,F,T
+goodsdtlid,number,明细标识号 ,textfield,T,PUB_GOODSDTL_PKSEQ,F,T,T,T,F,0,F,T
+packname,varchar,商品的包装单位,textfield,F,,F,F,T,T,T,0,F,T
+packsize,number,包装大小,textfield,F,,F,F,T,T,F,0,F,T
+color,number,颜色,textfield,F,,F,F,F,T,F,0,F,T
+model,varchar,型号,textfield,F,,F,F,T,T,T,0,F,T
+usestatus,number,使用状态,combobox,F,,F,F,F,T,T,0,F,T
+</form>
+<table>
+行号,goodsid,goodsdtlid,packname,packsize,color,model,usestatus
+</table>
+<querycolumns>
+goodsid:goodsdtlid:packname:packsize:color:model:usestatus
+</querycolumns>

@@ -1,0 +1,14 @@
+<form>
+factoryid,number,厂家ID,textfield,T,,F,T,T,T,F,0,F,T
+factoryopcode,varchar,厂家操作码,textfield,F,,T,F,T,T,F,0,F,T
+factoryno,varchar,厂家编号,textfield,F,,T,F,T,T,T,0,F,T
+factoryname,varchar,厂家名称,textfield,F,,F,F,T,T,F,0,F,T
+factorypinyin,varchar,拼音,textfield,F,,T,F,T,T,F,0,F,T
+usestatus,number,状态,combobox,F,,F,F,T,T,T,0,F,T
+</form>
+<table>
+行号,factoryid,factoryopcode,factoryno,factoryname,factorypinyin,usestatus
+</table>
+<querycolumns>
+factoryid:factoryopcode:factoryno:factoryname:factorypinyin:usestatus
+</querycolumns>

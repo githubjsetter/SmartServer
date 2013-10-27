@@ -1,0 +1,22 @@
+<form>
+wfname,varchar,流程名称,textfield,F,,F,T,T,T,F,0,F,T,F,,F,191,F
+tablename,varchar,基表名,textfield,F,,T,T,T,T,F,0,F,T,F,,F,99,F
+pkcolname,varchar,主键列名,textfield,F,,T,T,T,T,T,0,F,T,F,,F,63,F
+pkvalue,varchar,主键值,textfield,F,,F,T,T,T,F,0,F,T,F,,F,51,F
+currentstage,number,当前级,textfield,F,,F,T,T,T,F,0,F,T,F,,F,51,F
+statuscolname,varchar,单据状态字段名	,textfield,F,,F,T,T,T,T,0,F,T,F,,F,99,F
+viewname,varchar,对应的视图名,textfield,F,,T,T,T,T,F,0,F,T,F,,F,111,F
+wfstatus,varchar,状态,combobox,F,,F,F,T,T,T,0,F,T,F,,F,39,F
+wfinstanceid,number,流程实例ID,textfield,T,NP_WF_INSTANCE_SEQ,F,T,T,T,F,0,F,T,F,,F,75,F
+wfid,number,流程ID,textfield,F,,F,T,T,T,T,0,F,T,F,,F,51,F
+credate,date,建立日期,textfield,F,,F,T,T,T,T,0,F,T,F,,T,140,F
+</form>
+<table>
+行号,credate,wfname,tablename,viewname,pkcolname,pkvalue,currentstage,wfstatus,statuscolname,wfinstanceid,wfid
+</table>
+<querycolumns>
+wfid,10:wfinstanceid:wfname:credate:tablename:pkvalue:wfnodeinstanceid:wfinstanceid:startdate:enddate:wfstatus:wfnodeid:nodename:employeeid:employeename:pkcolname:currentstage:statuscolname:viewname:stage:actionresult:approvemessage:actiontype:classname
+</querycolumns>
+<querymustcolumns>
+
+</querymustcolumns>

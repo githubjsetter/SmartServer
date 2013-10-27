@@ -1,0 +1,12 @@
+<form>
+statusid,number,状态ID,textfield,F,,F,F,T,T,F,0,F,F,F
+statusname,varchar,状态,textfield,F,,F,F,T,T,T,0,F,F,F
+wfapprovestatusid,number,流程状态ID,textfield,T,NP_WF_APPROVESTATUS_SEQ,F,T,T,T,F,0,F,F,F
+wfid,number,流程ID,textfield,F,,F,T,T,T,T,0,F,F,F
+</form>
+<table>
+行号,statusid,statusname
+</table>
+<querycolumns>
+
+</querycolumns>

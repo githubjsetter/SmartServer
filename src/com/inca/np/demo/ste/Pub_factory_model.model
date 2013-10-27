@@ -1,0 +1,17 @@
+<form>
+factoryid,number,厂家ＩＤ,textfield,T,,F,F,T,T,F,0,F,T
+factoryopcode,varchar,操作码,textfield,F,,T,F,T,T,F,0,F,T
+factorypinyin,varchar,拼音,textfield,F,,T,F,T,T,T,0,F,T
+factoryname,varchar,厂家名称,textfield,F,,F,F,T,T,T,0,F,T
+计算列2,number,计算列2,textfield,F,,F,T,T,F,T,0,F,F
+</form>
+<table>
+行号,factoryid,factoryopcode,factorypinyin,factoryname,计算列2
+</table>
+<querycolumns>
+factoryid:factoryopcode:factorypinyin:factoryname
+</querycolumns>
+<hov>
+编辑查询
+factoryid,com.inca.np.demo.hov.Pub_company_hov,(companyid,factoryid)(companyopcode,factoryopcode)(companypinyin,factorypinyin)(companyname,factoryname)
+</hov>

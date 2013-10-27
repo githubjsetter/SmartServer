@@ -1,0 +1,7 @@
+<form>
+seqid,number,序号,textfield,F,,F,F,T,T,F,0,F,T
+credate,date,日期,textfield,F,,F,F,T,T,F,0,F,T
+prodname,varchar,产品,textfield,F,,F,F,T,T,T,0,F,T
+classname,varchar,类名,textfield,F,,F,F,T,T,F,0,F,T
+errormsg,varchar,错误,textfield,F,,F,F,T,T,F,0,F,T
+</form>

@@ -1,0 +1,23 @@
+<panelsize>656:262</panelsize>
+<comp>companyopcode_title:15:20:80:25:</comp>
+<comp>companyopcode:100:20:120:25:</comp>
+<comp>companypinyin_title:870:70:80:25:</comp>
+<comp>companypinyin:220:20:115:25:</comp>
+<comp>companyname_title:890:115:80:25:</comp>
+<comp>companyname:335:20:270:25:</comp>
+<comp>parentcompanyname_title:915:245:100:25:</comp>
+<comp>parentcompanyname:250:135:355:25:</comp>
+<comp>inputmanname_title:240:225:80:25:</comp>
+<comp>inputmanname:330:225:120:25:</comp>
+<comp>inputmanid_title:15:225:80:25:</comp>
+<comp>inputmanid:100:225:120:25:</comp>
+<comp>companyid_title:240:190:80:25:</comp>
+<comp>companyid:330:190:120:25:</comp>
+<comp>parentcompanyid_title:20:135:100:25:</comp>
+<comp>parentcompanyid:125:135:120:25:</comp>
+<comp>credate_title:15:190:80:25:</comp>
+<comp>credate:100:190:120:25:</comp>
+<comp>companymemo_title:15:50:80:25:</comp>
+<comp>companymemo:100:50:425:35:</comp>
+<comp>titleborder1:5:5:635:100:部门基本信息  </comp>
+<comp>titleborder2:5:115:635:60:上级单位信息</comp>

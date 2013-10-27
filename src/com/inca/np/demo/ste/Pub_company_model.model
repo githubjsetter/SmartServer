@@ -1,0 +1,13 @@
+<form>
+companyid,number,单位ＩＤ,textfield,T,PUB_COMPANY_COMPANYID_SEQ,F,F,T,T,F,0,F,T
+companyopcode,varchar,操作码,textfield,F,,T,F,T,T,F,0,F,T
+companypinyin,varchar,拼音,textfield,F,,T,F,T,T,T,0,F,T
+companyname,varchar,名称,textfield,F,,F,F,T,T,T,0,F,T
+计算列1,number,计算列1,textfield,F,,F,T,T,F,T,0,F,F
+</form>
+<table>
+行号,companyid,companyopcode,companypinyin,companyname,计算列1
+</table>
+<querycolumns>
+companyid:factoryid:companyopcode:companypinyin:companyname:factoryname
+</querycolumns>

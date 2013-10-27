@@ -1,0 +1,15 @@
+<form>
+starttime,date,开始时间,textfield,F,,F,T,T,T,T,0,F,F,F,,T
+nowtime,date,结束时间,textfield,F,,F,T,T,T,T,0,F,F,F,,T
+requestcount,number,请求总数,textfield,F,,F,T,T,T,T,0,F,F,F,,F
+processcount,number,处理总数,textfield,F,,F,T,T,T,T,0,F,F,F,,F
+avgcount1,number,吞吐量(次/秒),textfield,F,,F,T,T,T,T,0,F,F,F,,F
+processms,number,线程总用时(MS),textfield,F,,F,T,T,T,T,0,F,F,F,,F
+avgms,number,每次用时(ms),textfield,F,,F,T,T,T,T,0,F,F,F,,F
+</form>
+<table>
+行号,starttiem,requestcount,processcount,processms,avgcount
+</table>
+<querycolumns>
+
+</querycolumns>

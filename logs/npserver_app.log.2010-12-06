@@ -1,0 +1,20 @@
+2010-12-06 16:18:18,374-640   ERROR [com.inca.np.util.DefaulterrorHandle] (main:) 线程:Thread[main,5,main] 未捕获的错误 ERROR:
+java.lang.Error: Unresolved compilation problems: 
+	The import org.apache.tools.zip.ZipFile cannot be resolved
+	ZipFile cannot be resolved to a type
+
+	at com.inca.np.filesync.Uploadfile_dbprocess.<init>(Uploadfile_dbprocess.java:12)
+	at com.inca.npserver.server.Server.loadSystemprocessor(Server.java:176)
+	at com.inca.npserver.server.Server.getInstance(Server.java:153)
+	at com.inca.np.util.SendHelper.sendRequest(SendHelper.java:21)
+	at com.inca.npclient.download.Moduledownloader.downloadModulelist(Moduledownloader.java:44)
+	at com.inca.npclient.download.DownloadManager.downloadModuleinfo(DownloadManager.java:57)
+	at com.inca.npclient.download.DownloadManager.getInst(DownloadManager.java:47)
+	at com.inca.np.gui.mde.CMdeModel.setOpid(CMdeModel.java:2405)
+	at com.inca.np.gui.mde.CMdeModel.<init>(CMdeModel.java:192)
+	at com.inca.npx.mde.CMdeModelAp.<init>(CMdeModelAp.java:48)
+	at com.inca.sysmgr.roleop.Roleop_mde.<init>(Roleop_mde.java:24)
+	at com.inca.sysmgr.roleop.Roleop_frame.getMdeModel(Roleop_frame.java:16)
+	at com.inca.np.gui.mde.MdeFrame.initControl(MdeFrame.java:50)
+	at com.inca.np.gui.mde.MdeFrame.setOpid(MdeFrame.java:106)
+	at com.inca.sysmgr.roleop.Roleop_frame.main(Roleop_frame.java:30)

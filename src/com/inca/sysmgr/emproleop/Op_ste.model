@@ -1,0 +1,14 @@
+<form>
+roleopid,number,功能角色ID,textfield,T,,F,F,T,T,F,0,F,F,F,,F
+roleid,number,角色ID,textfield,F,,F,F,T,T,F,0,F,F,F,,F
+rolename,varchar,角色,textfield,F,,F,F,T,T,F,0,F,F,F,,F
+opid,number,功能ID,textfield,F,,F,F,T,T,F,0,F,T,F,,F
+opname,varchar,功能名称,textfield,F,,F,F,T,T,F,0,F,T,F,,F
+classname,varchar,类名,textfield,F,,F,F,T,T,T,0,F,T,F,,F
+</form>
+<table>
+行号,opname,classname,opid,roleopid
+</table>
+<querycolumns>
+opname:opid:classname
+</querycolumns>

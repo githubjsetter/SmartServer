@@ -1,0 +1,5 @@
+<form>
+dtlid,number,Ï¸µ¥ID,textfield,F,,F,F,T,T,F,0,F,T
+seqid,number,ÐòºÅ,textfield,F,,F,F,T,T,F,0,F,T
+dtlmsg,varchar,´íÎó,textfield,F,,F,F,T,T,T,0,F,T
+</form>

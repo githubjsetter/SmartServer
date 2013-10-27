@@ -1,0 +1,15 @@
+<rule>
+表格可以编辑
+true
+
+</rule>
+<rule>
+设置排序
+true
+tablename:asc
+</rule>
+<rule>
+级联查询
+true
+(查询修改日志,42)(tablename,=,tablename)()
+</rule>

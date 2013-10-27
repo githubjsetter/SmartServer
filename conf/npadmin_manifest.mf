@@ -1,0 +1,2 @@
+Main-Class: com.inca.adminclient.auth.Adminclient
+Class-Path: lib/npcommon-5.3.23.jar  lib/npserver_c-5.3.23.jar conf/ lib/skinlf.jar lib/poi-3.0-rc4-20070503.jar lib/log4j-1.2.8.jar lib/apachezip.jar

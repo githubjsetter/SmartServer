@@ -1,0 +1,15 @@
+<form>
+goodsid,number,货品流水号,textfield,T,PUB_GOODS_GOODSID_SEQ,F,T,T,T,F,0,F,T,F,,F
+factid,number,厂家ID,textfield,F,,F,T,T,T,F,0,F,T,F,,F
+goodsname,varchar,货品名称,textfield,F,,F,F,T,T,F,0,F,T,F,,F
+</form>
+<table>
+行号,goodsname,goodsid,factid
+</table>
+<querycolumns>
+goodsid:goodsname:factid
+</querycolumns>
+<hov>
+仅查询
+factid,com.inca.np.demo.hov.Pub_company_hov,(companyid,factid)(companyopcode,)(companyname,)(companypinyin,)
+</hov>

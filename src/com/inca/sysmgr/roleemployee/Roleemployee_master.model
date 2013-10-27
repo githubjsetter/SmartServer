@@ -1,0 +1,16 @@
+<form>
+rolename,varchar,角色,textfield,F,,F,F,T,T,F,0,F,T,F,,F,255,F
+roleid,number,角色ID,textfield,T,np_role_seq,F,T,T,T,T,0,F,F,F,,F,51,F
+</form>
+<table>
+行号,rolename,roleid
+</table>
+<querycolumns>
+rolename:roleid,4:employeename:deptname:rolename:employeeid:deptid
+</querycolumns>
+<querymustcolumns>
+
+</querymustcolumns>
+<rowcheck>
+rolename,非空,
+</rowcheck>

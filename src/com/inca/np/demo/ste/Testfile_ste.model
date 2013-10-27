@@ -1,0 +1,8 @@
+<form>
+id,number,id,textfield,T,,F,F,T,T,F,0,F,T
+name,varchar,name,textfield,F,,F,F,T,T,F,0,F,T
+filegroupid,number,filegroupid,textfield,F,,F,T,T,T,T,0,F,T
+</form>
+<table>
+ÐÐºÅ,id,name,filegroupid
+</table>

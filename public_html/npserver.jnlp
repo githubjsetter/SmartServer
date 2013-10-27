@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<jnlp codebase="http://$$codebase/npserver"> 
+
+    <information> 
+
+        <title>npserver</title> 
+
+        <vendor>INCA Corporation</vendor> 
+
+        <description>npserver</description> 
+
+        <homepage href="http://$$codebase/npserver/index.html"/> 
+
+        <offline-allowed/> 
+
+    </information> 
+<security> 
+   <all-permissions/> 
+</security>
+
+    <resources> 
+
+        <j2se version="1.5+"/> 
+
+
+        <jar href="./install.jar"/> 
+
+    </resources> 
+
+    <application-desc main-class="com.inca.npserver.clientinstall.ClientInstaller"/> 
+
+</jnlp>

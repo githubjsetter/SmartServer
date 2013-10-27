@@ -1,0 +1,12 @@
+<form>
+wfnoderoleid,number,结点角色ID,textfield,T,NP_WF_NODE_ROLEID_SEQ,F,T,T,T,F,0,F,F,F
+wfnodeid,number,结点ID,textfield,F,,F,T,T,T,F,0,F,F,F
+roleid,number,角色ID,textfield,F,,F,T,T,T,T,0,F,F,F
+rolename,varchar,角色,textfield,F,,F,T,F,F,T,0,F,F,F
+</form>
+<table>
+行号,rolename,wfnoderoleid,wfnodeid,roleid
+</table>
+<querycolumns>
+
+</querycolumns>

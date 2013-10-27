@@ -1,0 +1,427 @@
+<?xml version='1.0' encoding='gb2312'?>
+
+<!--
+Maven配置文件，与project.xml和project.properties配合使用。
+一般不需要修改本maven.xml文件。
+
+工程初始时，先编辑project.properties,修改maven.final.name为最终生成文件名；修改project.xml，输入
+工程的信息、开发人员和依赖的其它工程信息。
+
+日常运行：
+c:\>maven   
+　　生成ear文件并布署到jboss。这是默认目标，等价于maven deploy
+
+c:\>maven  ear  
+　　编译、打包生成ear文件
+
+c:\>maven  nightly-build
+　　每日晚应做的工程，清除生成目录，进行单元测试。如果测试通过，生成ear文件布署
+
+c:\>maven  test:test 
+　　进行单元测试
+
+c:\>maven  java:compile
+　　仅编译java文件
+
+c:\>maven  test:compile
+　　编译单元测试java文件
+
+
+c:\>maven  clean
+　　清除生成输出目录
+
+-->
+
+
+<project   default="deploy"   xmlns:j="jelly:core"   xmlns:u="jelly:util">
+
+  <goal name="init">
+  	<j:set var="build" value="./build" />
+  	<j:set var="release" value="./release" />
+  	<j:set var="lib" value="./lib" />
+	<j:set var="webapps" value="c:/tomcat51/webapps" />
+
+  	<mkdir dir="${release}"/>
+  	<mkdir dir="${lib}"/>
+  </goal>
+
+  <goal name="clean" prereqs="init">
+  	<j:set var="appdir" value="${webapps}/${maven.final.name}" />
+  	<delete dir="client" />
+  	<delete dir="build/classes" />
+  	<delete>
+  		<fileset dir="build" includes="*.jar,*.zip"/>
+  	</delete>
+  	
+  	<!--
+  	<delete dir="${appdir}/WEB-INF/classes/com" />
+  	<delete dir="${appdir}/WEB-INF/lib" />
+  	-->
+  </goal>
+  
+  
+  <goal name="jar" prereqs="init,java:compile">
+  		<echo>+---------------------------------------+</echo>
+  		<echo>|             生成jar文件               |</echo>
+  		<echo>+---------------------------------------+</echo>
+
+<!--
+  	<attainGoal name="unzipjar" />
+-->  	
+	<copy todir="${maven.build.dir}/classes">
+		<fileset dir="src" includes="**/*.xml"/>
+		<fileset dir="src" includes="**/*.txt"/>
+		<fileset dir="src" includes="**/*.gif"/>
+		<fileset dir="src" includes="**/*.png"/>
+		<fileset dir="src" includes="**/*.model"/>
+		<fileset dir="src" includes="**/*.form"/>
+		<fileset dir="src" includes="**/*.rule"/>
+		<fileset dir="src" includes="**/publickey"/>
+		<fileset dir="src" includes="**/privatekey"/>
+	</copy>
+  </goal>
+
+
+  <goal name="npserverjar" prereqs="init,java:compile">
+   <taskdef resource="proguard/ant/task.properties"
+           classpath="lib/proguard.jar" />
+           
+           
+	  <delete file="in.jar"/>
+		<jar file="in.jar">
+			<fileset dir="build/classes"/>
+		</jar>
+    
+    <taskdef resource="proguard/ant/task.properties"
+           classpath="lib/proguard.jar" />
+           
+
+           
+		<proguard configuration="conf/npcommon_proguard.pro" >
+		</proguard>
+	  <delete file="in.jar"/>
+	  <delete dir="proguard"/>
+		<mkdir dir="proguard"/>
+		<unjar src="out.jar" dest="proguard"/>		
+	  <unjar src="lib/barcodelib.jar" dest="proguard"/>
+           
+
+	<delete file="${maven.build.dir}/npserver_s-${maven.final.version}.jar" />
+	<jar destfile="${maven.build.dir}/npserver_s-${maven.final.version}.jar" >
+		<fileset dir="proguard" includes="com/inca/npserver/**"/> 
+		<fileset dir="proguard" includes="com/inca/np/**/*dbprocess*.class,com/inca/np/**/*Processor*.class"/> 
+		<fileset dir="proguard" includes="com/inca/npworkflow/server/**,com/inca/npbi/server/**,com/inca/npworkflow/common/**,com/inca/npserver/pushplat/server/**" />
+	</jar>
+  	
+	<delete file="${maven.build.dir}/npserver_c-${maven.final.version}.jar" />
+	<jar destfile="${maven.build.dir}/npserver_c-${maven.final.version}.jar" >
+		<fileset dir="proguard" includes="com/inca/npclient/**"/> 
+		<fileset dir="proguard" includes="com/inca/npworkflow/client/**"/> 
+		<fileset dir="proguard" includes="com/inca/npbi/client/**"/> 
+		<fileset dir="proguard" includes="com/inca/npworkflow/demo/**"/> 
+		<fileset dir="proguard" includes="com/inca/npserver/clientinstall/**"/> 
+		<fileset dir="proguard" includes="com/inca/npserver/pushplat/client/**"/> 
+		<fileset dir="proguard" includes="com/inca/npserver/pushplat/common/**"/> 
+		<fileset dir="proguard" includes="com/inca/npserver/timer/**"/> 
+	</jar>
+
+
+  </goal>
+
+  <goal name="npserverjar1" prereqs="init,java:compile">
+  <!--
+	  <delete dir="proguard"/>
+		<mkdir dir="proguard"/>
+		-->
+    <copy todir="proguard" >
+    	<fileset dir="build/classes" />
+    </copy>
+
+	<delete file="${maven.build.dir}/npserver_s-${maven.final.version}.jar" />
+	<jar destfile="${maven.build.dir}/npserver_s-${maven.final.version}.jar" >
+		<fileset dir="proguard" includes="com/inca/npserver/**"/> 
+		<fileset dir="proguard" includes="com/inca/np/**/*dbprocess*.class,com/inca/np/**/*Processor*.class"/> 
+		<fileset dir="proguard" includes="com/inca/npworkflow/server/**,com/inca/npbi/server/**,com/inca/npworkflow/common/**,com/inca/npserver/pushplat/server/**" />
+	</jar>
+  	
+	<delete file="${maven.build.dir}/npserver_c-${maven.final.version}.jar" />
+	<jar destfile="${maven.build.dir}/npserver_c-${maven.final.version}.jar" >
+		<fileset dir="proguard" includes="com/inca/npclient/**"/> 
+		<fileset dir="proguard" includes="com/inca/npworkflow/client/**"/> 
+		<fileset dir="proguard" includes="com/inca/npbi/client/**"/> 
+		<fileset dir="proguard" includes="com/inca/npworkflow/demo/**"/> 
+		<fileset dir="proguard" includes="com/inca/npserver/clientinstall/**"/> 
+		<fileset dir="proguard" includes="com/inca/npserver/pushplat/client/**"/> 
+		<fileset dir="proguard" includes="com/inca/npserver/pushplat/common/**"/> 
+		<fileset dir="proguard" includes="com/inca/npserver/timer/**"/> 
+	</jar>
+
+
+  </goal>
+
+  <goal name="commonjar" prereqs="init,java:compile">
+	<delete file="${maven.build.dir}/npcommon-${maven.final.version}.jar" />
+	<jar destfile="${maven.build.dir}/npcommon-${maven.final.version}.jar" >
+		<fileset dir="proguard" includes="com/inca/np/**/*, com/barcodelib/**" 
+		    excludes="**/*dbprocess*.class,**/*Processor*.class" /> 
+		<fileset dir="proguard" includes="org/**" /> 
+		<fileset dir="proguard" includes="com/inca/npx/**/*" />
+		<fileset dir="proguard" includes="com/inca/sysmgr/hov/HovapinfoModel*" />
+	</jar>
+  </goal>
+
+  <goal name="adminjar" prereqs="init,java:compile">
+	<delete file="${maven.build.dir}/npadmin_s-${maven.final.version}.jar" />
+	<jar destfile="${maven.build.dir}/npadmin_s-${maven.final.version}.jar" >
+		<fileset dir="proguard" includes="com/inca/adminclient/**/*dbprocess*.class"/> 
+	</jar>
+
+	<delete file="${maven.build.dir}/npadmin_c-${maven.final.version}.jar" />
+	<jar destfile="${maven.build.dir}/npadmin_c-${maven.final.version}.jar" manifest="conf/npadmin_manifest.mf">
+		<fileset dir="proguard" includes="com/inca/adminclient/**" excludes="**/*dbprocess*.class"/> 
+		<fileset dir="proguard" includes="com/inca/npserver/install/**" excludes="**/*dbprocess*.class"/> 
+		<fileset dir="proguard" includes="com/inca/npclient/download/**" excludes="**/*dbprocess*.class"/> 
+	</jar>
+
+	<delete file="release/licensetool.jar" />
+	<jar destfile="release/licensetool.jar" manifest="conf/licensetool_manifest.mf">
+		<fileset dir="proguard" includes="com/inca/licensetool/**" /> 
+		<fileset dir="proguard" includes="com/inca/npserver/prod/**"/> 
+	</jar>
+
+  </goal>
+
+  <goal name="sysmgrjar" prereqs="init,java:compile">
+	<delete file="${maven.build.dir}/sysmgr_s-${maven.final.version}.jar" />
+	<jar destfile="${maven.build.dir}/sysmgr_s-${maven.final.version}.jar" >
+		<fileset dir="proguard" includes="com/inca/sysmgr/**/*Processor*.class"/> 
+		<fileset dir="proguard" includes="com/inca/sysmgr/**/*dbprocess*.class"/> 
+	</jar>
+  	<copy todir="${release}" file="${build}/sysmgr_s-${maven.final.version}.jar" />
+
+	<delete file="${maven.build.dir}/sysmgr_c-${maven.final.version}.jar" />
+	<jar destfile="${maven.build.dir}/sysmgr_c-${maven.final.version}.jar" >
+		<fileset dir="proguard" includes="com/inca/sysmgr/**" 
+		        excludes="**/**dbprocess*.class,**/**Processor*.class"/> 
+	</jar>
+  </goal>
+
+
+	<!--
+	prereqs="npserverjar1 for without proguard
+	-->
+
+  <goal name="installzip" prereqs="npserverjar,commonjar,adminjar,sysmgrjar,client">
+  	<delete file="build/public_html.zip"/>
+  	<zip destfile="build/public_html.zip">
+	 	<fileset dir="public_html" /> 
+	</zip>
+
+
+  	<delete file="release/npserver-${maven.final.version}-install.zip"/>
+  	<zip destfile="release/npserver-${maven.final.version}-install.zip">
+	 	<fileset dir="npserver" includes="installinfo"/> 
+	 	<fileset dir="${maven.build.dir}" includes="npserver*${maven.final.version}*jar"/> 
+	 	<fileset dir="${maven.build.dir}" includes="npcommon*${maven.final.version}*jar"/> 
+	 	<fileset dir="${maven.build.dir}" includes="npadmin*${maven.final.version}*jar"/> 
+	 	<fileset dir="${maven.build.dir}" includes="public_html.zip"/> 
+	</zip>
+  	<delete file="build/public_html.zip"/>
+
+  	<delete file="release/sysmgr-${maven.final.version}-install.zip"/>
+  	<zip destfile="release/sysmgr-${maven.final.version}-install.zip">
+	 	<fileset dir="sysmgr" includes="installinfo"/> 
+	 	<fileset dir="${maven.build.dir}" includes="sysmgr*${maven.final.version}*jar"/> 
+	</zip>
+
+
+  </goal>
+
+
+  <goal name="installjar" prereqs="init,java:compile">
+	<echo>+---------------------------------------+</echo>
+	<echo>|             生成install.jar           |</echo>
+	<echo>+---------------------------------------+</echo>
+    <delete file="tmp.jar"/>
+    <jar destfile="tmp.jar" >
+	<fileset dir="build/classes" includes="com/inca/npserver/clientinstall/**"/>
+	<fileset dir="ziplib" includes="**"/>
+    </jar>
+    <taskdef resource="proguard/ant/task.properties"
+           classpath="lib/proguard.jar" />
+
+	<proguard configuration="conf/install_proguard.pro" />
+    <delete file="tmp.jar"/>
+    
+    
+  </goal>
+
+
+  <goal name="war" prereqs="init,java:compile,jar">
+  		<echo>+---------------------------------------+</echo>
+  		<echo>|             生成war文件               |</echo>
+  		<echo>+---------------------------------------+</echo>
+
+
+	<!-- copy library -->
+    <j:forEach var="dep" items="${pom.dependencies}">
+        <j:if test="${dep.getProperty('jar.bundle') == 'true'}">
+            <j:set var="dist.name" value="${dep.getArtifactId()}"/>
+            <j:set var="internal.war.path" value="${dep.getProperty('dist.native.name')}"/>
+            <j:set var="internal.war.path" value="${dep.getProperty('dist.native.name')}"/>
+            <u:tokenize var="parts" delim=":">${dep.getId()}</u:tokenize>
+            <j:set var="depid" value="${parts[0]}"/>
+            <j:set var="dist.dependency.zip" value="${maven.repo.local}/${depid}/jars/${dep.getArtifact()}"/>
+            
+            <copy todir="${lib}" file="${dist.dependency.zip}"/>
+        </j:if>
+    </j:forEach>
+
+<!--
+	<delete file="${maven.build.dir}/${maven.final.name}.war" />
+	<war destfile="${maven.build.dir}/${maven.final.name}.war" webxml="WEB-INF/web.xml">
+		<classes dir="build/classes"/>
+		<lib dir="build"/>
+		<fileset dir="public_html" />
+		<fileset dir="." includes="WEB-INF/**/*" excludes="**/web.xml"/>
+	</war>
+-->
+
+  </goal>
+
+
+  <goal name="client" prereqs="war">
+  	<delete dir="client" />
+   	<mkdir dir="client"/>
+  	<mkdir dir="client/conf"/>
+  	<mkdir dir="client/lib"/>
+  	<mkdir dir="client/logs"/>
+
+	<copy todir="client">
+		<fileset dir="." includes="bin/npserver.cmd.template"/>
+		<fileset dir="." includes="bin/npserver.lnk.template"/>
+		<fileset dir="." includes="bin/npserver_d.lnk.template"/>
+		<fileset dir="." includes="bin/npserver.bat.template"/>
+		<fileset dir="." includes="bin/npserver.pif.template"/>
+		<fileset dir="." includes="bin/npserver_d.pif.template"/>
+		<fileset dir="." includes="bin/nbms.ico"/>
+		<fileset dir="." includes="bin/setpath.cmd"/>
+		<fileset dir="." includes="bin/setpath.bat"/>
+		<fileset dir="." includes="lib/log4j-1.2.8.jar"/>
+		<fileset dir="." includes="lib/skinlf.jar"/>
+		<fileset dir="." includes="lib/apachezip.jar"/>
+		<fileset dir="." includes="lib/poi-3.0-rc4-20070503.jar"/>
+		<fileset dir="." includes="lib/jcommon-1.0.0-rc1.jar"/>
+		<fileset dir="." includes="lib/jfreechart-1.0.0-rc1.jar"/>
+		<fileset dir="." includes="lib/npserverexe.jar"/>
+		<fileset dir="." includes="skin/roueBluethemepack.zip"/>
+		<fileset dir="lib" includes="npserver.exe"/>
+	</copy>
+	
+	<copy todir="client/lib">
+  		<fileset dir="build" includes="npserver_c-${maven.final.version}.jar" />
+  		<fileset dir="build" includes="npcommon-${maven.final.version}.jar" />
+	</copy>
+	
+	<copy todir="client/conf">
+		<fileset dir="conf" includes="log4j*"/>
+	</copy>
+  
+	<delete file="public_html/npserver_c.zip" />
+	<zip destfile="public_html/npserver_c.zip" >
+		<fileset dir="client" /> 
+	</zip>
+	
+  	
+  </goal>
+
+  
+  <goal name="deploy" prereqs="war">
+  	<attainGoal name="installzip"/>
+
+
+  	<j:set var="targetdir" value="${webapps}/${maven.final.name}" />
+  	<mkdir dir="${targetdir}" />
+  	
+  	<copy todir="${targetdir}" >
+   	   <fileset dir="public_html" />
+   	   <fileset dir="."  includes="WEB-INF/web.xml" />
+   	   <fileset dir="build" includes="npserver_c.zip" />
+  	</copy>
+  	
+  	<copy todir="${targetdir}/WEB-INF/lib">
+   	   <fileset dir="build" includes="*${maven.final.version}.jar" />
+
+		<fileset dir="lib" includes="log4j-1.2.8.jar"/>
+		<fileset dir="lib" includes="skinlf.jar"/>
+		<fileset dir="lib" includes="poi-3.0-rc4-20070503.jar"/>
+		<fileset dir="lib" includes="jcommon-1.0.0-rc1.jar"/>
+		<fileset dir="lib" includes="jfreechart-1.0.0-rc1.jar"/>
+		<fileset dir="lib" includes="apachezip.jar"/>
+  	</copy>
+
+  	<copy todir="${targetdir}/WEB-INF/lib">
+   	   <fileset dir="public_html" includes="install.jar" />
+   	   <fileset dir="public_html" includes="index.html" />
+  	</copy>
+
+<!--  	
+  	<copy todir="c:/npserver/lib">
+   	   <fileset dir="build" includes="npcommon-${maven.final.version}.jar" />
+   	   <fileset dir="build" includes="npserver_c-${maven.final.version}.jar" />
+  	</copy>
+-->  	
+
+  	<copy todir="c:/npserver">
+   	   <fileset dir="build" includes="npadmin_c-${maven.final.version}.jar" />
+   	   <fileset dir="release" includes="licensetool**.jar" />
+  	</copy>
+
+  </goal>
+  
+	<goal name="timejar" prereqs="init">
+		<jar file="WEB-INF/classes/timer/t.jar">
+			<fileset dir="build/classes" includes="com/inca/npserver/timer/*.class" />
+		</jar>
+  </goal>
+  
+
+ 
+ <!--每日下班必做工作-->
+  <goal name="nightly-build">
+  	<!--请空生成目录-->
+  	<attainGoal name="clean"/>
+  	<!--进行编译和单元测试-->
+  	<attainGoal name="test:test"/>
+  	<!--打包布署-->
+  	<attainGoal name="deploy"/>
+  </goal>
+
+
+	<goal name="runtest" prereqs="init,java:compile">
+	
+	
+		<java fork="yes" classname="TestZSJC">
+        <classpath>
+          <pathelement location="build/test-classes"/>
+          <pathelement location="${maven.build.dest}"/>
+          <path refid="maven.dependency.classpath"/>
+        </classpath>
+		</java>
+	</goal>
+
+	<goal name="javadoc" prereqs="init">
+	<javadoc packagenames="com.*"
+           sourcepath="src"
+           defaultexcludes="yes"
+           destdir="docs/api"
+           author="false"
+           version="false"
+           use="false"
+           windowtitle="NPSERVER">
+    <doctitle><![CDATA[<h1>NPSERVER</h1>]]></doctitle>
+    <bottom><![CDATA[<i>Copyright &#169; 2009 INCA Corp. All Rights Reserved.</i>]]></bottom>
+  </javadoc>
+	</goal>
+
+</project>

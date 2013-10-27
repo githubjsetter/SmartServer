@@ -1,0 +1,17 @@
+<form>
+seqid,number,序号,textfield,T,,F,T,T,T,F,0,F,F,F,,F,39
+credate,date,日期,textfield,F,,F,T,T,T,F,0,F,T,F,,T,136
+mac,varchar,网卡mac,textfield,F,,F,T,T,T,T,0,F,T,F,,F,143
+fromip,varchar,请求IP,textfield,F,,F,T,T,T,F,0,F,T,F,,F,134
+memo,varchar,备注,textfield,F,,F,T,T,T,F,0,F,T,F,,F,119
+approveflag,number,审批标准,combobox,F,,F,F,T,T,T,0,F,F,F,,F,140
+</form>
+<table>
+行号,seqid,credate,mac,fromip,memo,approveflag
+</table>
+<querycolumns>
+credate:mac:fromip:memo
+</querycolumns>
+<querymustcolumns>
+credate
+</querymustcolumns>

@@ -1,0 +1,13 @@
+<form>
+roleopid,number,功能角色ID,textfield,T,NP_ROLEOP_SEQ,F,T,T,T,F,0,F,F,F,,F
+roleid,number,角色ID,textfield,F,,F,T,T,T,F,0,F,T,F,,F
+rolename,varchar,角色,textfield,F,,F,T,F,F,T,0,F,T,F,,F
+opid,number,功能ID,textfield,F,,F,T,T,T,F,0,F,T,F,,F
+opname,varchar,功能名称,textfield,F,,F,T,F,F,T,0,F,T,F,,F
+</form>
+<table>
+行号,opname,opid,roleopid,roleid,rolename
+</table>
+<querycolumns>
+roleid:rolename:opid:opname:apname
+</querycolumns>

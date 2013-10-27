@@ -1,0 +1,10 @@
+<form>
+employeeid,number,人员ID,textfield,T,,F,F,T,T,F,0,F,F,F
+maxmoney,number,限额金额,textfield,F,,F,F,T,T,T,0,F,F,F
+</form>
+<table>
+行号,employeeid,maxmoney
+</table>
+<querycolumns>
+
+</querycolumns>

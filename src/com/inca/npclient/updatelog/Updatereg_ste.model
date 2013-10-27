@@ -1,0 +1,13 @@
+<form>
+tablename,varchar,表名,textfield,T,,T,F,T,T,F,0,F,T,F,,F,204
+memo,varchar,备注,textfield,F,,F,F,T,T,T,0,F,T,F,,F,252
+</form>
+<table>
+行号,tablename,memo
+</table>
+<querycolumns>
+tablename:memo
+</querycolumns>
+<querymustcolumns>
+
+</querymustcolumns>

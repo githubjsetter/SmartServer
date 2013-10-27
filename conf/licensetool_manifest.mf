@@ -1,0 +1,2 @@
+Main-Class: com.inca.licensetool.Licensetool
+Class-Path: conf/ lib/log4j-1.2.8.jar 

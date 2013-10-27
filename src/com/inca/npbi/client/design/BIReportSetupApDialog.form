@@ -1,0 +1,12 @@
+<panelsize>548:385</panelsize>
+<comp>cbcannew:5:0:65:15:</comp>
+<comp>cbcandelete:85:0:65:15:</comp>
+<comp>btndept:440:85:95:25:</comp>
+<comp>btnemployee:440:135:95:25:</comp>
+<comp>btnrole:440:185:95:25:</comp>
+<comp>btnentryid:440:230:95:25:</comp>
+<comp>lbwhere:135:20:130:15:</comp>
+<comp>textquerycond:5:40:425:290:</comp>
+<comp>btnOk:125:340:60:25:</comp>
+<comp>btnCancel:215:340:60:25:</comp>
+<comp>btnDesign:330:340:60:25:</comp>

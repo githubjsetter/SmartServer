@@ -1,0 +1,15 @@
+<rule>
+设置系统下拉选择
+false
+usestatus:PUB_COMPANY_USESTATUS
+</rule>
+<rule>
+级联查询
+true
+(查询录入人,2)(employeeid,=,inputmanid)()
+</rule>
+<rule>
+设置编辑控件大小
+true
+parentcompanyname:220.0:27.0
+</rule>

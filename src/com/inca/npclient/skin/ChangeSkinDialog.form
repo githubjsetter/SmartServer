@@ -1,0 +1,6 @@
+<panelsize>227:266</panelsize>
+<comp>jc:0:0:220:200:</comp>
+<comp>btnOk:0:210:60:25:</comp>
+<comp>btnCancel:65:210:60:25:</comp>
+<comp>btnDesign:20:240:70:15:</comp>
+<comp>btnDelete:135:210:60:25:</comp>

@@ -1,0 +1,17 @@
+<form>
+boxno,number,箱号,textfield,F,,F,T,T,T,F,0,F,F,F,,F
+col1,number,箱底/买点,textfield,F,,F,T,T,T,F,0,F,F,F,,F
+col2,number,强压力,textfield,F,,F,T,T,T,F,0,F,F,F,,F
+col3,number,黑马线,textfield,F,,F,T,T,T,F,0,F,F,F,,F
+col4,number,中轴逃命止损,textfield,F,,F,T,T,T,F,0,F,F,F,,F
+col5,number,弱支撑(压力),textfield,F,,F,T,T,T,F,0,F,F,F,,F
+col6,number,强支撑(压力),textfield,F,,F,T,T,T,F,0,F,F,F,,F
+col7,number,出货止赢,textfield,F,,F,T,T,T,F,0,F,F,F,,F
+col8,number,箱顶/目标价,textfield,F,,F,T,T,T,T,0,F,F,F,,F
+</form>
+<table>
+行号,boxno,col1,col2,col3,col4,col5,col6,col7,col8
+</table>
+<querycolumns>
+
+</querycolumns>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="gb2312"?>
+<project>
+	<pomVersion>3</pomVersion>
+	
+	
+<!-- 项目全名 -->	
+	<name>英克新平台</name>
+	
+	
+<!-- 项目ID -->	
+	<id>np</id>
+
+<!-- 当前版本-->	
+	<currentVersion>1.0</currentVersion>
+
+<!-- 项目起始年 -->	
+	<inceptionYear>2004</inceptionYear>
+
+<!-- 源代码CVS存储 -->	
+	<repository>
+		<connection>scm:cvs:pserver:somebody@192.9.200.106:/home/cvsroot:np</connection>
+	</repository>
+	<mailingLists/>
+
+<!-- 开发人员 -->	
+	<developers>
+		<developer>
+			<name>wwh</name>
+			<id>wwh</id>
+			<email>wwh@inca.com.cn</email>
+			<roles>
+				<role>manager</role>
+			</roles>
+		</developer>
+
+	</developers>
+
+<!-- 需要的辅助库，一般是jar文件 -->	
+	<dependencies>
+
+		
+		<dependency>
+			<id>servlet</id>
+			<version>2.3</version>
+			<jar>servlet.jar</jar>
+			<properties>
+				<jar.bundle>true</jar.bundle>
+			</properties>
+		</dependency>
+		
+		<dependency>
+			<id>junit</id>
+			<version>3.8.1</version>
+		</dependency>
+
+		<dependency>
+			<id>log4j</id>
+			<version>1.2.8</version>
+			<properties>
+				<jar.bundle>true</jar.bundle>
+			</properties>
+		</dependency>
+
+
+		<dependency>
+			<id>ojdbc</id>
+			<version>1.4</version>
+			<jar>ojdbc14.jar</jar>
+		</dependency>
+			
+		<dependency>
+			<id>skinlf</id>
+			<version>6.7</version>
+			<jar>skinlf.jar</jar>
+			<properties>
+				<jar.bundle>true</jar.bundle>
+			</properties>
+		</dependency>
+
+		<dependency>
+			<id>jfreechart</id>
+			<version>1.0.0</version>
+			<jar>jfreechart-1.0.0-rc1.jar</jar>
+			<properties>
+				<jar.bundle>true</jar.bundle>
+			</properties>
+		</dependency>
+		
+
+		<dependency>
+			<id>jnlp</id>
+			<version>1.0</version>
+			<jar>jnlp.jar</jar>
+			<properties>
+				<jar.bundle>true</jar.bundle>
+			</properties>
+		</dependency>
+
+		<dependency>
+			<groupId>proguard</groupId>
+			<artifactId>proguard</artifactId>
+			<version>3.9</version>
+			<jar>proguard.jar</jar>
+			<properties>
+				<jar.bundle>true</jar.bundle>
+			</properties>
+		</dependency>
+
+
+
+	</dependencies>
+	
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<unitTestSourceDirectory>test/src</unitTestSourceDirectory>
+		
+		<unitTest>
+			<includes>
+				<include>**/Test*.java</include>
+			</includes>
+
+	        <resources>
+	          <resource>
+	            <directory>test/src</directory>
+	            <includes>
+	              <include>**/*.xml</include>
+	              <include>**/*.properties</include>
+	            </includes>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+	          </resource>
+	        </resources>
+
+		</unitTest>
+		
+      <!--
+      	运行时使用的资源：
+      	src/下所有的xml和properties,除java
+      	conf/下所有的properties
+      -->
+        <resources>
+        
+          <resource>
+            <directory>src</directory>
+            <includes>
+              <include>**/*.xml</include>
+              <include>**/*.properties</include>
+            </includes>
+			<excludes>
+				<exclude>**/*.java</exclude>
+			</excludes>
+          </resource>
+
+
+
+          <resource>
+            <directory>conf</directory>
+            <includes>
+              <include>**/*.properties</include>
+            </includes>
+          </resource>
+
+        </resources>
+	</build>
+</project>

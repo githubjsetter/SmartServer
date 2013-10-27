@@ -1,0 +1,7 @@
+<form>
+sql,varchar,sql,textarea,F,,F,F,T,T,F,0,F,T
+executecount,number,执行次数,textfield,F,,F,F,T,T,T,0,F,T
+totalusetime,number,总共用时,textfield,F,,F,F,T,T,T,0,F,T
+maxusetime,number,最大一次用时,textfield,F,,F,F,T,T,T,0,F,T
+avgusetime,number,平均一次用时,textfield,F,,F,F,T,T,T,0,F,T
+</form>
